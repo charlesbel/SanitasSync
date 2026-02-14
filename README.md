@@ -633,7 +633,3 @@ Thanks to the reverse engineering and React Native communities for tools and kno
 **⚙️ Built through reverse engineering for the Sanitas + Samsung Health community**
 
 _This is an independent project. Sanitas, Samsung, and Google trademarks belong to their respective owners._
-
-```
-
-```
