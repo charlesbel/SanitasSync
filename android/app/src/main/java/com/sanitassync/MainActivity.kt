@@ -1,5 +1,7 @@
 package com.sanitassync
 
+import android.os.Bundle
+import dev.matinzd.healthconnect.permissions.HealthConnectPermissionDelegate
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
@@ -12,6 +14,12 @@ class MainActivity : ReactActivity() {
    * rendering of the component.
    */
   override fun getMainComponentName(): String = "SanitasSync"
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    // Nécessaire pour gérer les résultats du contrat de permissions Health Connect
+    HealthConnectPermissionDelegate.setPermissionDelegate(this)
+  }
 
   /**
    * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]
